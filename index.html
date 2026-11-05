@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoVault - Discover High Quality Visuals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="logo-area">
+      <h1>PictureVault</h1>
+      <p class="tagline">Search millions of free curated images across the web</p>
+    </div>
+
+    <!-- Search Control Form -->
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Search photos, vectors, illustrations..." 
+        required 
+      />
+      <button id="search-btn" type="submit">Search</button>
+      <button id="clear-btn" type="button" class="btn-secondary">Clear</button>
+    </form>
+
+    <!-- Additional Feature 1: Quick Pick Categories -->
+    <div class="category-chips">
+      <span class="chip-label">Suggestions:</span>
+      <button type="button" class="chip">Nature</button>
+      <button type="button" class="chip">Architecture</button>
+      <button type="button" class="chip">Minimalism</button>
+      <button type="button" class="chip">Cyberpunk</button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Additional Feature 2: Result Count Placeholder & Empty State -->
+    <div class="status-bar">
+      <p id="result-count" class="status-text"></p>
+    </div>
+
+    <div id="empty-state" class="empty-state">
+      <h2>Start your visual journey</h2>
+      <p>Type a topic in the search bar above or pick a category to explore results.</p>
+    </div>
+
+    <!-- Target Empty Results Container (CSS Grid applied in styles.css) -->
+    <section id="results" class="image-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
